@@ -1,0 +1,28 @@
+<div class="col-sm-12">
+	
+	<h2 style="margin-bottom:30px;">Monstrando detalles de {{serie.name}}  </h2>  
+	<div class="row">
+			<div class="col-md-4">
+				<img ng-src="{{config.imagenes + serie.poster_path}}" alt="{{serie.name}}" style="width:300px" />
+			</div>	
+	
+			<div class="col-md-8">
+				<h3>Nombre:</h3> {{serie.name}}
+				<h3>Género</h3> 
+				<ul>
+					<div ng-repeat="genero in listadoGeneros">
+
+						 <li >
+		                        <a href="javascript:void(0);" ng-click="verGeneros(genero.id,genero.name)">{{genero.name}}</a>
+		                </li>
+		            </div>
+					
+						
+				</ul>
+				<h3>Sinopsis:</h3> {{serie.overview}}
+				<h3>Episodios:</h3>{{serie.number_of_episodes}}
+				<h3>Temporadas:</h3>{{serie.number_of_seasons}}
+			</div>
+	
+	</div>
+</div>
